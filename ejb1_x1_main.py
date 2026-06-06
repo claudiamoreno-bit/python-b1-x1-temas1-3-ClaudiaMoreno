@@ -67,8 +67,7 @@ def find_largest_word(text):
     if len(clean_word) > len(largest_word):
         largest_word = clean_word
     
-    return largest_word
-    pass                
+    return largest_word             
 
 def is_palindrome_word(word):
     word = remove_punctuation_marks(word).lower()  # quitamos puntuación y pasamos a minúsculas
@@ -80,8 +79,6 @@ def is_palindrome_word(word):
         return False
     
     return is_palindrome_word(word[1:-1])  # repetimos con la palabra sin primera y última letra
-    pass
-    
 
 
 def count_palindrome_words(text):
@@ -103,9 +100,7 @@ def count_palindrome_words(text):
             count += 1
     
     return count
-    pass
-
-
+   
 def find_size_largest_sentence(text, filter):
     largest_size = 0       # tamaño de la oración más larga
     current_sentence = ""  # oración que vamos construyendo
@@ -131,8 +126,6 @@ def find_size_largest_sentence(text, filter):
         raise ValueError(f"No se encontró ninguna oración con el filtro '{filter}'")
     
     return largest_size
-    pass
-
 
 
 print("La palabra mas larga es:", find_largest_word(TEXT))
